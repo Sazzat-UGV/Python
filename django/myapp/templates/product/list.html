@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i in product%}
+    <h1>{{ i.name }}</h1>
+    <h3>{{ i.price }}</h3>
+    <a href="/product/{{i.id}}/" style="width: 40; height: 20; background-color: green; color: white; padding: 5px; text-decoration: none;">Details</a>
+    <a href="/product/{{i.id}}/update" style="width: 40; height: 20; background-color: green; color: white; padding: 5px; text-decoration: none;">Update</a>
+    <a href="/product/{{i.id}}/delete" style="width: 40; height: 20; background-color: red; color: white; padding: 5px; text-decoration: none;">Delete</a>
+    <hr>
+    {% endfor %}
+</body>
+</html>
